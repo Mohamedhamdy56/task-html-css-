@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header*/
+.headercontent{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.644);
+    position: fixed;
+    z-index: 100;
+    overflow: auto;
+}
+.headercontent img{
+    width: 100px;
+    height: 40px;
+    margin: 8px 60px;
+}
+.headercontent ul {
+    list-style: none;
+    float: right;
+}
+
+.headercontent ul li{
+    display: inline-block;
+    margin: 0px 15px;
+    line-height: 50px;
+}
+.headercontent ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.headercontent ul li a:hover{
+    color: rgb(24, 96, 250);
+}
+
+/*   hero image  /////////////////////////////////////////////////////////////// */
+.homeparent{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/ddd.jpg);
+}
+.homeOverlay{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    position: relative;
+}
+.content{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+.content h2{
+    margin: 20px auto;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content p{
+    margin: 10px auto;
+    font-size: 20px;
+    color: white;
+}
+
+.content input{
+    width: 150px;
+    height: 55px;
+    margin: auto;
+    border-radius: 6px ;
+    font-size: 18px;
+}
+
+.btn2{
+    background-color: rgb(4, 112, 212);
+    color: white;
+}
+
+.content input:hover{
+    opacity: 0.8;
+}
+
+/* welcome  */
+.welcomeparent{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    padding-top: 21px;
+    text-align: center;
+}
+.Welcometitle{
+    font-size: 40px;
+    margin-top: 200px;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.line{
+    width: 100px;
+    height: 4px;
+    background-color: blue;
+    margin:  auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.welcomecontent{
+    overflow: auto;
+    width: 80%;
+    margin: 80px auto;
+    
+}
+.welcomeitem{
+    
+    float: left;
+    width: 30%;
+    height: 250px;
+    margin-bottom: 200px;
+   
+    
+    border: 1px solid ;
+    position: relative;
+}
+
+.welcomeitemcontant{
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    
+}
+.welcomeitemcontant i{
+    margin: 30px auto;
+    font-size: 30px;
+    color: rgb(35, 105, 255);
+}
+.welcomeitemcontant h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px ;
+    transition: 2s;
+    
+}
+.welcomeitem:hover .welcomeitemcontant h2{
+    color: white;
+}
+.welcomeitem::after{
+    position: absolute;
+    z-index: 0;
+    content: "";
+
+    width: 0%;
+    height: 0%;
+    top:0;
+    left: 0;
+
+    background-color: black;
+    opacity: 0;
+    transition: 1s;
+}
+
+.welcomeitem:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.welcomeitem p{
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 20px ;
+}
+.welcomeitem a{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+}
+.x{
+    margin: 0px 5%;
+
+}
+
+
+/*Feature work*/
+
+.featureparent{
+    padding-top:1px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(199, 199, 199);
+}
+
+.featurecontent{
+    width: 80%;
+    margin: 50px auto;
+    overflow: auto;
+}
+
+.featureitem{
+    float: left;
+    width: 30%;
+    position: relative;
+}
+
+.featureitem img{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.featureoverlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden; 
+    opacity: 0;
+    transition: 1s;
+}
+
+.featureoverlayp1 {
+    margin-top: 150px;
+    color: rgb(61, 2, 199);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.featureoverlayp2{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.featureoverlaycontant i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: rgb(43, 135, 255);
+    color: blue;
+    border-radius: 6px;
+}
+
+.featureitem:hover .featureoverlay{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+
+/*offer*/
+.offerparent{
+    /* padding-top:1px; */
+    background-color: white;
+    padding-bottom: 50px;
+    width: 100%;
+    margin: auto;
+    padding-top: 21px;
+    text-align: center;
+}
+
+.offercontant{
+    margin: auto;
+    width: 80%;
+    overflow: auto;
+}
+
+.offeritem{
+    text-align: start;
+    width: 30%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(173, 173, 173);
+    padding:  30px 60px;
+    position: relative;
+}
+
+.offeritem p{
+    margin: 20px auto;
+    color: gray;
+}
+
+.offeritem i {
+    position: absolute;
+    top: 30px ;
+    left: 10px;
+    font-size: 30px;
+    color: rgb(49, 136, 207);
+}
+
+.offeritem::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(190, 188, 188, 0.616);
+    transition: 1s;
+    opacity: 0;
+}
+.offeritem:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+/* choose */
+
+.chooseparent{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px ;
+    padding-bottom: 100px;
+}
+.choosecontainer{
+    margin: auto;
+    width: 80%;
+    overflow: auto;
+}
+.line1{
+    width: 100px;
+    height: 4px;
+    background-color: blue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.contenttext{
+    width: 50%;
+    padding: 30px;
+    overflow: auto;
+    float: left;
+}
+.choosep{
+    margin: 50px 0px;
+    font-size: 20px;
+    color: grey;
+}
+.p1{
+    margin: 10px 10px;
+    color: grey;
+}
+.contenttext i{
+    /* margin: 10px 10px;  */
+    padding-left: 30px;
+    float: left;
+    color: rgb(49, 136, 207);
+}
+
+
+.chooseimg{
+    padding: 20px;
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.chooseimg img{
+    width: 90%;
+    height: 90%;
+}
+
+.chooseimg li{
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin: 0px 3px; 
+    background-color:gray ;
+    border-radius: 100%;
+    transition: .5s;
+}
+
+.chooseimg li:hover{
+    background-color: rgb(49, 136, 207); 
+}
+.choosetitle{
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* people */
+
+.peopleparent{
+    width: 100%;
+    background-image: url(../Images/eee.jpeg) ;
+    background-attachment: fixed;
+    
+}
+.peopleoverlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.peoplecontainer{
+    margin: auto;
+    width: 80%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: auto;
+}
+
+
+.peopleitem{
+    width: 25%;
+    height: 100%;
+    float: left;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 110px;
+    
+}
+.peopleitem i{
+    font-size: 30px;
+    color: rgb(49, 136, 207);
+    margin: 10px;
+}
+.peopleitem h2{
+    font-size: 25px;
+    color: white;
+    margin: 10px;
+}
+.peopleitem p{
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+}
+
+/* price */
+.priceparent{
+    width: 100%;
+    padding-top: 150px ;
+    padding-bottom: 100px;
+    background-color: white;
+}
+.pricecontianer
+{
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    overflow: auto;
+}
+.pricetitle{
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.priceitem{
+    border: 1px solid gray;
+    width: 30%;
+    float: left;
+    position: relative;
+}
+.priceitem h3{
+    margin: 20px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: gray;
+    transition: 1s;
+}
+.priceitem:hover h3{
+    color: red;
+}
+.priceitem:hover .price{
+    color: red;
+}
+.price{
+    width: min-content;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 100% ;
+    border: 1px solid  rgb(0, 119, 255);
+    transition: 1s; 
+}
+.pricep{
+    margin: 20px auto;
+    color: grey;
+}
+.contianer{
+    padding-top: 60px;
+}
+.priceitem button{
+    padding: 5px;
+    margin: 0px auto 20px auto;
+    border-color: rgba(0, 119, 255, 0.568);
+}
+
+.priceitem::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0%;
+    top:0;
+    left: 0;
+    background-color: rgba(190, 188, 188, 0.316);
+    opacity: 0;
+    transition: 1s;
+}
+.priceitem:hover::after{
+   
+    height: 100%;
+    opacity: 1;
+}
+
+/* web */
+.webparent{
+    width: 100%;
+    background-image: url("../Images/eee.jpeg");
+    background-attachment: fixed;
+}
+
+.weboverlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.webcontainer{
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+}
+
+.webitem{
+    width: 45%;
+    float: left;
+    padding-top: 100px ;
+    padding-bottom: 100px;
+    text-align: start;
+    color: white;
+    position: relative;
+    
+}
+.p{
+    margin-right: 50px;
+}
+.webitem img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline;
+
+    position: absolute;
+    top: 63px;
+    left: 0px;
+}
+.webitem span{
+    margin-left: 130px;
+}
+.webp2{
+   color:blue;
+}
+.webp{
+    margin-top: 30px;
+}
+
+/* team */
+
+.teamparent{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.teamcontainer{
+    margin: 30px auto;
+    width: 80%;
+    overflow: auto;
+}
+
+.teamitem{
+    width: 30%;
+    padding: 20px;
+    float: left;
+    text-align: center;
+    background-color: rgb(172, 171, 171);
+    position: relative;
+}
+
+.teamimage{
+    position: relative;
+    margin-bottom: 20px;
+}
+.teamoverlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.363);
+    opacity: 0;
+    transition: 1s;
+
+}
+.teamoverlay i{
+    margin-left: auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(81, 161, 253);
+    line-height: 40px;
+    
+}
+
+.teamitem::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.253);
+    opacity: 0;
+    transition: 1s;
+}
+.teamitem:hover .teamoverlay{
+    opacity: 1;
+}
+
+.teamitem:hover::after{
+    height: 100%;
+    opacity: 1;
+}
+.name{
+    transition: 1s;
+}
+.track{
+    transition: 1s;
+}
+.teamitem:hover .name{
+    color:blue
+}
+
+.teamitem:hover .track{
+    color: white;
+}
